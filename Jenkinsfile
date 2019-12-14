@@ -34,7 +34,7 @@ node {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")*/
             
-        docker.withRegistry('localhost:5000', 'docker-hub-credentials') {
+        docker.withRegistry('http://localhost:5000', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
