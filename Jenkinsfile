@@ -39,7 +39,7 @@ node {
             app.push("latest")
             
         logstashSend failBuild: true, maxLines: 1000
-        logstashSend ${env.BUILD_NUMBER}
+        logstashSend "${env.BUILD_NUMBER}"
 
         }
     }
