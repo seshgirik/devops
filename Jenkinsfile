@@ -37,8 +37,8 @@ node {
         /*docker.withRegistry('http://localhost:5000', 'docker-hub-credentials') {  */
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
 
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+            /*app.push("${env.BUILD_NUMBER}")
+            app.push("latest")*/
             
         logstashSend failBuild: true, maxLines: 1000
         logstashSend "${env.BUILD_NUMBER}"
