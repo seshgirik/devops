@@ -3,6 +3,7 @@ node {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
+        logstashSend failBuild: true, maxLines: 1000
 
         checkout scm
     }
