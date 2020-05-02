@@ -1,4 +1,4 @@
-node {
+node('agent')  {
     def app
 
     stage('Clone repository') {
